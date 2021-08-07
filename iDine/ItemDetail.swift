@@ -16,7 +16,6 @@ struct ItemDetail: View {
         VStack {
             ZStack(alignment: .bottomTrailing) {
                 Image(item.mainImage)
-                
             //如果將.padding放到.background後面，會發生畫面沒有內距的狀況，因為背景先塗黑了，才繪上內距，新加入的內距會沒有上到黑色
                 Text("Photo: \(item.photoCredit)")
                     .padding(4)
