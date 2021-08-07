@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D66664E26BE612E004E7A58 /* CheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D66664D26BE612E004E7A58 /* CheckoutView.swift */; };
 		8DA8FB6226BAF5C700B3B8C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA8FB6126BAF5C700B3B8C0 /* AppDelegate.swift */; };
 		8DA8FB6426BAF5C700B3B8C0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA8FB6326BAF5C700B3B8C0 /* SceneDelegate.swift */; };
 		8DA8FB6626BAF5C700B3B8C0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA8FB6526BAF5C700B3B8C0 /* ContentView.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8D66664D26BE612E004E7A58 /* CheckoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutView.swift; sourceTree = "<group>"; };
 		8DA8FB5E26BAF5C700B3B8C0 /* iDine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iDine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DA8FB6126BAF5C700B3B8C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8DA8FB6326BAF5C700B3B8C0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 			children = (
 				8DA8FB6126BAF5C700B3B8C0 /* AppDelegate.swift */,
 				8DA8FB6326BAF5C700B3B8C0 /* SceneDelegate.swift */,
+				8D66664D26BE612E004E7A58 /* CheckoutView.swift */,
 				8DA8FB7526BAF66300B3B8C0 /* Helper.swift */,
 				8DA8FB7726BAF71100B3B8C0 /* Menu.swift */,
 				8DA8FB7B26BAF75000B3B8C0 /* menu.json */,
@@ -172,6 +175,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DA8FB7A26BAF71200B3B8C0 /* Order.swift in Sources */,
+				8D66664E26BE612E004E7A58 /* CheckoutView.swift in Sources */,
 				8DA8FB6226BAF5C700B3B8C0 /* AppDelegate.swift in Sources */,
 				8DA8FB6426BAF5C700B3B8C0 /* SceneDelegate.swift in Sources */,
 				8DA8FB7E26BC415300B3B8C0 /* ItemRow.swift in Sources */,
