@@ -13,12 +13,19 @@ struct CheckoutView: View {
     
     static let paymentTypes = ["Cash", "Credit Card", "iDine points"]
     static let tipAmounts = [10, 15, 20, 25, 0]
-    
+
     //使用@State讓picker被使用者選擇時可以即時改變paymentType的值
     @State private var paymentType = 0 //Cash by default
     @State private var addLoyaltyDetails = false
     @State private var loyaltyNumber = ""
     @State private var tipAmount = 1 //15 by default
+    @State private var showingPaymentAlert = false
+    
+    var totalPrice: Double {
+        let total = Double(order.total)
+        let tipValue = total / 100 * Double(Self.tipAmounts[tipAmount])
+        return total + tipValue
+    }
     
     var body: some View {
         Form {
@@ -47,13 +54,17 @@ struct CheckoutView: View {
                 }.pickerStyle(SegmentedPickerStyle())
             }
             
-            Section(header: Text("TOTAL: $100")) {
+            
+            Section(header: Text("TOTAL: $\(totalPrice, specifier: "%.2f")")) {
                 Button("Confirm Order") {
-                    //place the order
+                    self.showingPaymentAlert.toggle()
                 }
             }
         }
         .navigationBarTitle(Text("Payment"), displayMode: .inline)
+        .alert(isPresented: $showingPaymentAlert) {
+            Alert(title: Text("Order confirmed"), message: Text("Your total was $\(totalPrice, specifier: "%.2f") - thank you!"), dismissButton: .default(Text("OK")))
+        }
     }
 }
 
