@@ -13,6 +13,7 @@ struct CheckoutView: View {
     
     static let paymentTypes = ["Cash", "Credit Card", "iDine points"]
     static let tipAmounts = [10, 15, 20, 25, 0]
+    static let timeTypes = ["Now", "Tonight", "Tomorrow Morning"]
 
     //使用@State讓picker被使用者選擇時可以即時改變paymentType的值
     @State private var paymentType = 0 //Cash by default
@@ -20,6 +21,7 @@ struct CheckoutView: View {
     @State private var loyaltyNumber = ""
     @State private var tipAmount = 1 //15 by default
     @State private var showingPaymentAlert = false
+    @State private var timeType = 0
     
     var totalPrice: Double {
         let total = Double(order.total)
@@ -54,6 +56,14 @@ struct CheckoutView: View {
                 }.pickerStyle(SegmentedPickerStyle())
             }
             
+            Section {
+                Picker("Picker time:", selection: $timeType) {
+                    ForEach(0 ..< Self.timeTypes.count) {
+                        Text(Self.timeTypes[$0])
+                    }
+                }
+                
+            }
             
             Section(header: Text("TOTAL: $\(totalPrice, specifier: "%.2f")").font(.largeTitle)) {
                 Button("Confirm Order") {
