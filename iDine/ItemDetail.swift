@@ -42,9 +42,14 @@ struct ItemDetail: View {
         }
         .navigationBarTitle(Text(item.name), displayMode: .inline)
         .navigationBarItems(trailing: Button(action: {
-            self.favorite.add(item: self.item)
+            self.favorite.toggle(item: self.item)
         }){
-            Image(systemName: "heart")
+            if self.favorite.check(item: self.item) {
+                Image(systemName: "heart.fill").imageScale(.large)
+            }else {
+                Image(systemName: "heart").imageScale(.large)
+            }
+            
         })
     }
 }

@@ -21,4 +21,16 @@ class Favorite: ObservableObject {
             items.remove(at: index)
         }
     }
+    
+    func check(item: MenuItem) -> Bool {
+        return items.contains(item)
+    }
+    
+    func toggle(item: MenuItem) {
+        if self.check(item: item) {
+            self.remove(item: item)
+        } else {
+            self.add(item: item)
+        }
+    }
 }

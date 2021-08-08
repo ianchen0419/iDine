@@ -14,11 +14,22 @@ struct FavoriteView: View {
     var body: some View {
         NavigationView {
             List {
-                ForEach(favorite.items) {item in
-                    Text(item.name)
+                Section {
+                    ForEach(favorite.items) {item in
+                        NavigationLink(destination: ItemDetail(item: item)) {
+                            Text(item.name)
+                        }
+                    }.onDelete(perform: deleteItems)
                 }
-            }.navigationBarTitle("Favorite Menu")
+            }
+            .navigationBarTitle("Favorite Menu")
+            .listStyle(GroupedListStyle())
+            .navigationBarItems(trailing: EditButton())
         }
+    }
+    
+    func deleteItems(at offsets: IndexSet) {
+        favorite.items.remove(atOffsets: offsets)
     }
 }
 
