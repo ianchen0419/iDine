@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,25 +16,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="2uN-5N-ebe">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iDine" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aSa-hd-I3V">
-                                <rect key="frame" x="170" y="427.5" width="74.5" height="41"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iDine" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" translatesAutoresizingMaskIntoConstraints="NO" id="aSa-hd-I3V">
+                                <rect key="frame" x="100" y="419" width="214" height="58.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="50"/>
+                                <color key="textColor" red="0.92549019607843142" green="0.39215686274509803" blue="0.18823529411764706" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <constraints>
-                            <constraint firstAttribute="bottom" secondItem="2uN-5N-ebe" secondAttribute="bottom" id="A3H-l4-vII"/>
-                            <constraint firstItem="2uN-5N-ebe" firstAttribute="trailing" secondItem="Ze5-6b-2t3" secondAttribute="trailing" id="B5C-IL-6Tn"/>
-                            <constraint firstItem="aSa-hd-I3V" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="END-xX-tnN"/>
-                            <constraint firstItem="2uN-5N-ebe" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="SSS-Zt-3ow"/>
-                            <constraint firstItem="aSa-hd-I3V" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="meb-G4-BZ2"/>
-                            <constraint firstItem="2uN-5N-ebe" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="pvm-fe-uBa"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="1" green="0.92156862745098034" blue="0.8784313725490196" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="aSa-hd-I3V" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="END-xX-tnN"/>
+                            <constraint firstItem="aSa-hd-I3V" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="SqQ-KW-RcT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aSa-hd-I3V" secondAttribute="trailing" constant="100" id="dAx-av-HTy"/>
+                            <constraint firstItem="aSa-hd-I3V" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="meb-G4-BZ2"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -41,7 +38,4 @@
             <point key="canvasLocation" x="52.173913043478265" y="375"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="background" width="888" height="1334"/>
-    </resources>
 </document>
